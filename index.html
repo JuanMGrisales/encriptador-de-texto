@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="./img/iconoBrain.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="seccionLogotipo">
+            <img class="iconoCerebro" src="./img/iconoBrain.png" alt="Cerebro">
+            <p class="tituloLogotipo" >Encripter</p>        
+        </div>
+    </header>
+    
+    <main class="seccionMain">
+        <h1>Encriptador de Texto</h1>
+        <section class="seccionPrincipal">            
+            <!-- Seccion 1 Entrada de datos -->
+            <div class="seccionEntrada">
+                <textarea id="primerTexto" class="textoEntrada" name="cuadroEntrada" id="cuadroDeEntrada" placeholder="Ingresa el texto a encriptar/desencriptar:"></textarea>
+                <div class="seccionBotonesEntrada">
+                    <button onclick="encriptarTexto();" class="botonesEntrada" >Encriptar</button>
+                    <button onclick="desencriptarTexto();" class="botonesEntrada">Desencriptar</button>
+                </div>
+            </div>
+            <!-- Seccion 2 Salida de datos + Copiar -->
+            <div class="seccionSalida">
+                <textarea id="segundoTexto" class="textoSalida" name="cuadroSalida" id="cuadroDeSalida"></textarea>
+                <button class="botonCopiarTexto">Copiar texto</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desarrollado por J. M. Grisales</p>
+        <img class="iconoCopyright" src="./img/iconoCopyright.png" alt="iconoCopyright">
+        <p>2024</p>
+    </footer>
+    
+    <script src="./app.js"></script>
+</body>
+
+</html>

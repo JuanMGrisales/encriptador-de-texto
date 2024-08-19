@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+10&display=swap');
+
+:root{
+    --primerColor: radial-gradient(circle, #E2DFD0, #32012F);
+    --segundoColor: linear-gradient(to bottom, #F97300, #E2DFD0);
+    --tercerColor: linear-gradient(to top, #F97300, #E2DFD0);
+    --cuartoColor: #F97300;
+    --quintoColor: #32012F;
+    --sextoColor: #E2DFD0;
+    --septimoColor: #f19f57;
+    --octavoColor: #80547d;
+    --colorTitulo: linear-gradient(to right, #F97300, #32012F);
+    --primeraFuente: "Fira Sans Condensed", sans-serif;
+    --segundaFuente: "Jersey 10", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: var(--primerColor);
+}
+
+
+/* ------------------------------ H E A D E R ------------------------------ */
+
+
+header {
+    border-bottom: solid 2px var(--cuartoColor);
+    color: var(--quintoColor);
+    padding: 2% 2% 1.5% 2%;
+    font-size: 3em;
+    font-family: var(--segundaFuente);
+    font-weight: 400;
+    background: var(--segundoColor);
+}
+
+.seccionLogotipo {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.iconoCerebro {
+    height: 3rem;
+    width: 3rem;
+}
+
+
+/* ------------------------------ M A I N ------------------------------ */
+
+
+.seccionMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: 1% 0% 5% 0%;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    margin: 2.5% 3.5% 3.5% 3.5%;
+    text-align: center;
+    font-size: 3.5em;
+    font-family: var(--primeraFuente);    
+    font-weight: 800;
+    font-style: normal;
+    color: var(--colorTitulo);
+}
+
+.seccionPrincipal {
+    width: 100%;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+
+/* -------------------------- 1era SECCION ENTRADA -------------------------- */
+
+
+.seccionEntrada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    width: 120%;
+    gap: 0.8rem;
+}
+
+.textoEntrada {
+    resize: none;
+    height: 75%;
+    width: 85%;
+    color: var(--cuartoColor);
+    background-color: var(--sextoColor);
+    border: solid 7px var(--cuartoColor);
+    border-radius: 4%;
+    font-family: var(--primeraFuente);
+    font-size: 1.5em; 
+    padding: 1%;      
+    
+}
+
+.textoEntrada::placeholder {
+    color:var(gray);
+}
+
+
+.seccionBotonesEntrada {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;    
+}
+
+.botonesEntrada {
+    height: 3rem;
+    width: 10rem;
+    font-family: var(--primeraFuente);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: solid 2px var(--cuartoColor);
+    border-radius: 8%;
+}
+
+.botonesEntrada:hover {
+    height: 3.2rem;
+    width: 10.5rem;
+    background-color: var(--septimoColor);
+    font-size: 1.7rem;
+    color: var(--quintoColor);
+
+}
+
+
+/* -------------------------- 2da SECCION SALIDA -------------------------- */
+
+
+.seccionSalida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    gap: 0.8rem;
+}
+
+.textoSalida {
+    resize: none;
+    height: 75%;
+    width: 85%;
+    color: var(--quintoColor);
+    background-color: var(--sextoColor);
+    border: solid 7px var(--quintoColor);
+    border-radius: 4%;
+    font-family: var(--primeraFuente);
+    font-size: 1.5em;      
+    padding: 1%; 
+    
+}
+
+.botonCopiarTexto {
+    height: 3rem;
+    width: 10rem;
+    font-family: var(--primeraFuente);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: solid 2px var(--quintoColor);
+    border-radius: 8%;
+}
+
+.botonCopiarTexto:hover {
+    height: 3.2rem;
+    width: 10.5rem;
+    background-color: var(--octavoColor);
+    font-size: 1.7rem;
+    color: var(--sextoColor);
+
+}
+
+
+/* ------------------------------ F O O T E R ------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 2%;
+    font-size: 1em;
+    text-align: center;
+    border-top: solid 2px var(--cuartoColor);
+    font-family: var(--primeraFuente);
+    font-style: italic;
+    background: var(--tercerColor);
+}
+
+.iconoCopyright {
+    height: 8px;
+    width: 8px;    
+}
+
+
+/* ------------------------- BREAKPOINT: TABLET 800PX ------------------------- */
+
+
+@media (max-width: 800px) {
+    
+    .seccionPrincipal {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .seccionEntrada {
+        width: 100%;
+    }
+
+    h1 {
+        color: var(--cuartoColor);
+    }
+
+    footer {
+        padding: 3%;
+    }
+}
+
+/* ------------------------- BREAKPOINT: PHONE 480PX ------------------------- */
+
+@media (max-width: 480px) {
+
+    .seccionLogotipo {
+        justify-content: center;
+    }
+
+    .tituloLogotipo {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .seccionBotonesEntrada {
+        gap: 2rem;
+    }
+
+    footer {
+        padding: 4%;
+    }
+    
+}

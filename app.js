@@ -1,3 +1,8 @@
+//Ocultamos el segundo text area temporalmente
+document.getElementById('segundoTexto').style.display = 'none';
+document.getElementById('btnCopiar').style.display = 'none';
+
+
 function encriptarTexto(){
 
     //Capturamos el texto
@@ -21,6 +26,11 @@ function encriptarTexto(){
         })
     
         console.log(textoPreEncriptado);
+
+    //Quitamos imagen inactiva y mostramos el resto de contenido
+    document.getElementById('segundoTexto').style.display = 'block';
+    document.getElementById('btnCopiar').style.display = 'block';
+    document.getElementById('cuadroImagenInactiva').style.display = 'none';
     
     //Metodo join para coger el array cambiado y mostrarlo como cadena de texto
         let textoFinal = textoPreEncriptado.join("");
@@ -54,9 +64,23 @@ function desencriptarTexto() {
 
     console.log(textoPreEncriptado);
 
+//Quitamos imagen inactiva y mostramos el resto de contenido
+    document.getElementById('segundoTexto').style.display = 'block';
+    document.getElementById('btnCopiar').style.display = 'block';
+    document.getElementById('cuadroImagenInactiva').style.display = 'none';
+
 //Metodo join para coger el array cambiado y mostrarlo como cadena de texto
     let textoFinal = textoPreEncriptado.join("");
     document.getElementById('segundoTexto').value = textoFinal;
 
 
+}
+
+// *************************** BOTON COPIAR TEXTO ******************************************
+
+function copiarTexto() {
+
+    let textoCopiar = document.getElementById('segundoTexto').value;
+    navigator.clipboard.writeText(textoCopiar);
+    
 }

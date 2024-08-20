@@ -11,7 +11,7 @@
     <header>
         <div class="seccionLogotipo">
             <img class="iconoCerebro" src="./img/iconoBrain.png" alt="Cerebro">
-            <p class="tituloLogotipo" >Encripter</p>        
+            <p class="tituloLogotipo">Encripter</p>        
         </div>
     </header>
     
@@ -29,7 +29,11 @@
             <!-- Seccion 2 Salida de datos + Copiar -->
             <div class="seccionSalida">
                 <textarea id="segundoTexto" class="textoSalida" name="cuadroSalida" id="cuadroDeSalida"></textarea>
-                <button class="botonCopiarTexto">Copiar texto</button>
+                <button onclick="copiarTexto();" id="btnCopiar" class="botonCopiarTexto">Copiar texto</button>
+                <div class="seccionImagenInactiva" id="cuadroImagenInactiva">
+                    <img class="imagenInactiva" src="./img/Muñeco.png" alt="Muñeco">
+                    <p class="textoImagenInactiva" >Ningún mensaje fue encontrado</p>                    
+                </div>
             </div>
         </section>
     </main>

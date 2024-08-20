@@ -9,6 +9,7 @@
     --sextoColor: #E2DFD0;
     --septimoColor: #f19f57;
     --octavoColor: #80547d;
+    --novenoColor: #060e7c;
     --colorTitulo: linear-gradient(to right, #F97300, #32012F);
     --primeraFuente: "Fira Sans Condensed", sans-serif;
     --segundaFuente: "Jersey 10", sans-serif;
@@ -186,6 +187,27 @@ h1 {
 
 }
 
+.seccionImagenInactiva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+    width: 75%;
+    color: var(--novenoColor);
+    background-color: var(--sextoColor);
+    border: solid 7px var(--quintoColor);
+    border-radius: 4%;
+    font-family: var(--primeraFuente);
+    font-size: 1.5rem;      
+    padding: 1% 1% 1% 1%;
+}
+
+.imagenInactiva {
+    height: 80%;
+    width: 90%;
+}
+
 
 /* ------------------------------ F O O T E R ------------------------------ */
 
@@ -232,6 +254,10 @@ footer {
     footer {
         padding: 3%;
     }
+
+    .imagenInactiva {
+        width: 80%;
+    }
 }
 
 /* ------------------------- BREAKPOINT: PHONE 480PX ------------------------- */
@@ -258,4 +284,11 @@ footer {
         padding: 4%;
     }
     
+    .imagenInactiva {
+        width: 90%;
+    }
+
+    .seccionImagenInactiva {
+        font-size: 1.3rem;
+    }
 }
